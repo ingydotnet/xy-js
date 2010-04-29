@@ -5,10 +5,17 @@ var XY = function(opts) {
 
 XY.fn = XY.prototype;
 
+function $range(a,b,c) {
+    if (typeof(c) == 'undefined') c = 1;
+    var r = [];
+    for (var i = a; i <= b; i += c) r.push(i);
+    return $(r);
+}
+
 XY.fn.init = function(opts) {
     this.opts = opts;
-    var $xs = $([0,1,2]);
-    var $ys = $([0,1,2]);
+    var $xs = $range(0,9);
+    var $ys = $range(0,9);
 
     var block = "<div style='width:512px;height:512px;background:#fff;position:absolute;top:0px;left:0px;'></div>";
 
