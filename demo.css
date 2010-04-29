@@ -1,0 +1,11 @@
+body { padding: 0; margin: 0 }
+
+.surface {
+    width: 90%;
+    height: 600px;
+    margin: 5px auto;
+    border: 5px solid orange;
+
+    overflow: auto;
+    position: relative;
+}
